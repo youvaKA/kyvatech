@@ -1,0 +1,367 @@
+/* Basic Reset & Typography */
+body {
+    margin: 0;
+    font-family: 'Montserrat', sans-serif; /* Example font */
+    line-height: 1.6;
+    color: #333;
+    background-color: #f8f8f8; /* Light background */
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+h1, h2, h3 {
+    color: #002D62; /* Darker blue, similar to logo */
+    margin-bottom: 20px;
+}
+
+a {
+    text-decoration: none;
+    color: #007bff; /* Standard link blue */
+}
+
+/* Buttons */
+.btn {
+    display: inline-block;
+    padding: 10px 20px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+    font-weight: 600;
+}
+
+.btn-primary {
+    background-color: #2ECC71; /* Electric green from logo */
+    color: white;
+    border: none;
+}
+
+.btn-primary:hover {
+    background-color: #28a745;
+}
+
+.btn-secondary {
+    background-color: #002D62; /* Dark blue from logo */
+    color: white;
+    border: none;
+}
+
+.btn-secondary:hover {
+    background-color: #001f40;
+}
+
+/* Header */
+.main-header {
+    background-color: white;
+    padding: 15px 0;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    position: relative; /* Ajouté pour s'assurer que le header est au-dessus du parallax */
+    z-index: 10; /* Pour qu'il soit au-dessus de tout */
+}
+
+.header-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo img {
+    height: 50px; /* Adjust as needed */
+}
+
+.main-nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+.main-nav ul li {
+    margin-left: 25px;
+}
+
+.main-nav ul li a {
+    color: #333;
+    font-weight: 600;
+    padding: 5px 0;
+    position: relative;
+}
+
+.main-nav ul li a::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    background-color: #2ECC71; /* Green accent */
+    left: 0;
+    bottom: 0;
+    transition: width 0.3s ease;
+}
+
+.main-nav ul li a:hover::after {
+    width: 100%;
+}
+
+/* Hero Section - Modifié pour le Parallaxe */
+.hero-section { /* Cette section devient le .parallax-container */
+    position: relative;
+    height: 500px; /* Ajustez la hauteur selon vos besoins */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    text-align: center;
+    overflow: hidden; /* Pour contenir l'image de fond qui déborde */
+    /* background-image: url('hero_background.jpg'); REMOVE THIS LINE */
+    /* background-size: cover; REMOVE THIS LINE */
+    /* background-position: center; REMOVE THIS LINE */
+    /* filter: brightness(0.6); REMOVE THIS LINE */
+    /* z-index: -1; REMOVE THIS LINE */
+}
+
+/* NOUVELLES RÈGLES POUR L'IMAGE DE PARALLAXE */
+.parallax-image {
+    position: absolute;
+    top: -10%; /* Permet à l'image de bouger sans laisser de vide */
+    left: -10%; /* Permet à l'image de bouger sans laisser de vide */
+    width: 120%; /* Plus large et plus haut que le conteneur pour le mouvement */
+    height: 120%; /* Plus large et plus haut que le conteneur pour le mouvement */
+    background-size: cover; /* L'image couvre l'intégralité de l'élément */
+    background-position: center center; /* Centre l'image */
+    will-change: transform; /* Indique au navigateur que la propriété 'transform' va changer, pour optimiser l'animation */
+    transition: transform 0.1s ease-out; /* Ajoute une transition douce au mouvement */
+    filter: brightness(0.6); /* Assombrir l'image pour la lisibilité du texte */
+    z-index: 1; /* Place l'image sous le contenu mais au-dessus du fond du body */
+}
+
+
+.hero-content { /* Ce sont les éléments de contenu par-dessus l'image */
+    position: relative; /* Important pour que le texte soit au-dessus de l'image */
+    z-index: 2; /* S'assure que le contenu est visible par-dessus l'image */
+}
+
+.hero-content h1 {
+    font-size: 3em;
+    margin-bottom: 20px;
+    color: white; /* Ensure text is white over dark background */
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.5); /* Ombre pour la lisibilité */
+
+}
+
+/* Services Section */
+.services-section {
+    padding: 60px 0;
+    text-align: center;
+}
+
+.service-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+    margin-top: 40px;
+}
+
+.service-item {
+    background-color: white;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.service-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 20px rgba(0,0,0,0.1);
+}
+
+.service-item img {
+    height: 60px; /* Adjust icon size */
+    margin-bottom: 20px;
+}
+
+.service-item h3 {
+    color: #002D62;
+    margin-bottom: 10px;
+}
+
+/* Why Kyvatech Section */
+.why-kyvatech-section {
+    background-color: #002D62; /* Dark blue background */
+    color: white;
+    padding: 80px 0;
+}
+
+.why-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 50px;
+}
+
+.why-text {
+    flex: 2;
+}
+
+.why-text h2 {
+    color: white;
+    margin-bottom: 30px;
+}
+
+.why-text ul {
+    list-style: none;
+    padding: 0;
+}
+
+.why-text ul li {
+    margin-bottom: 15px;
+    font-size: 1.1em;
+}
+
+.why-text .highlight {
+    font-weight: 700;
+    color: #2ECC71; /* Green accent */
+}
+
+.contact-form-simple {
+    flex: 1;
+    background-color: rgba(255, 255, 255, 0.1); /* Slightly transparent white */
+    padding: 30px;
+    border-radius: 8px;
+}
+
+.contact-form-simple h3 {
+    color: white;
+    margin-bottom: 20px;
+}
+
+.contact-form-simple form input,
+.contact-form-simple form textarea {
+    width: calc(100% - 20px);
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    border-radius: 5px;
+    background-color: rgba(255, 255, 255, 0.05);
+    color: white;
+}
+
+.contact-form-simple form input::placeholder,
+.contact-form-simple form textarea::placeholder {
+    color: rgba(255, 255, 255, 0.7);
+}
+
+.contact-form-simple form button {
+    width: 100%;
+}
+
+/* Footer */
+.main-footer {
+    background-color: #222; /* Dark footer */
+    color: white;
+    padding: 40px 0 20px;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 30px;
+}
+
+.footer-logo img {
+    height: 40px; /* Adjust footer logo size */
+}
+
+.footer-links,
+.footer-contact,
+.social-media {
+    flex: 1;
+    min-width: 180px; /* Ensure columns don't get too narrow */
+}
+
+.footer-links h4,
+.footer-contact h4,
+.social-media h4 {
+    color: #2ECC71; /* Green accent for headings */
+    margin-bottom: 15px;
+}
+
+.footer-links ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-links ul li {
+    margin-bottom: 8px;
+}
+
+.footer-links ul li a {
+    color: rgba(255, 255, 255, 0.7);
+}
+
+.footer-links ul li a:hover {
+    color: white;
+}
+
+.footer-contact p {
+    margin-bottom: 8px;
+    font-size: 0.9em;
+}
+
+.social-media img {
+    height: 30px;
+    margin-right: 10px;
+}
+
+.footer-bottom {
+    text-align: center;
+    padding-top: 20px;
+    margin-top: 30px;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    font-size: 0.8em;
+    color: rgba(255, 255, 255, 0.5);
+}
+
+/* Basic Responsiveness (for smaller screens) */
+@media (max-width: 768px) {
+    .header-content {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .main-nav ul {
+        flex-direction: column;
+        margin-top: 15px;
+    }
+
+    .main-nav ul li {
+        margin: 5px 0;
+    }
+
+    .hero-content h1 {
+        font-size: 2em;
+    }
+
+    .service-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .why-content {
+        flex-direction: column;
+    }
+
+    .footer-content {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .footer-links,
+    .footer-contact,
+    .social-media {
+        min-width: unset;
+        width: 100%;
+        margin-bottom: 20px;
+    }
+}
