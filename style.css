@@ -301,7 +301,7 @@ a {
 .partners-section {
     padding: var(--spacing-xl) 0;
     text-align: center;
-    background-color: rgba(255, 255, 255, 0.8); /* Utilisation de la couleur de fond claire pour la section */
+    background-color: rgba(255, 255, 255, 0.8);
 }
 
 .partners-section h2 {
@@ -313,25 +313,25 @@ a {
     justify-content: center;
     align-items: center;
     flex-wrap: wrap;
-    gap: var(--spacing-lg); /* Espacement entre les logos */
+    gap: var(--spacing-lg);
     margin-top: var(--spacing-lg);
-    background-color: white; /* Fond de la tuile */
+    background-color: white;
     padding: var(--spacing-lg);
-    border-radius: 12px; /* Coins arrondis */
-    box-shadow: 0 4px 20px rgba(0,0,0,0.08); /* Ombre douce */
+    border-radius: 12px;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.08);
 }
 
 .partner-logo img {
     max-height: 80px;
     width: auto;
     max-width: 100%;
-    filter: grayscale(100%); /* Logos en noir et blanc */
+    filter: grayscale(100%);
     opacity: 0.6;
     transition: filter var(--transition-duration) ease, opacity var(--transition-duration) ease;
 }
 
 .partner-logo img:hover {
-    filter: grayscale(0%); /* Logos en couleur au survol */
+    filter: grayscale(0%);
     opacity: 1;
 }
 
@@ -388,6 +388,13 @@ a {
         flex-direction: column;
         gap: var(--spacing-md);
     }
+
+    .logo img:first-child {
+        height: 35px;
+    }
+    .logo img:last-child {
+        height: 25px;
+    }
     
     .main-nav {
         width: 100%;
@@ -410,6 +417,10 @@ a {
         font-size: 2em;
     }
 
+    .services-section, .partners-section, .why-kyvatech-section {
+        padding: var(--spacing-lg) 0;
+    }
+
     .service-grid {
         grid-template-columns: 1fr;
     }
@@ -421,6 +432,20 @@ a {
     .contact-form-simple {
         width: 100%;
         margin-top: var(--spacing-md);
+    }
+
+    .partners-section .container {
+        padding: 0 var(--spacing-sm);
+    }
+    
+    .partner-tile {
+        flex-direction: column;
+        gap: var(--spacing-md);
+        padding: var(--spacing-md);
+    }
+
+    .partner-logo img {
+        max-height: 60px;
     }
 
     .footer-content {
