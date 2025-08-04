@@ -6,24 +6,56 @@
     <title>Kyvatech - Votre partenaire IT</title>
     <link rel="stylesheet" href="style.css">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
+    <style>
+        /* Styles pour le fond dynamique */
+        #particles-js {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+            background-color: #002D62; /* Ajoutez la couleur de fond de votre site ici */
+        }
+
+        /* Assurez-vous que le contenu est au-dessus du fond */
+        .hero-section, .main-header, .services-section, .why-kyvatech-section, .main-footer {
+            position: relative;
+            z-index: 1;
+        }
+
+        /* Rendre l'arrière-plan des sections semi-transparent */
+        .main-header { background-color: rgba(255, 255, 255, 0.9); }
+        .services-section { background-color: rgba(255, 255, 255, 0.8); }
+        .why-kyvatech-section { background-color: rgba(0, 45, 98, 0.9); }
+        .main-footer { background-color: rgba(34, 34, 34, 0.9); }
+
+        /* Le reste de votre CSS... */
+    </style>
 </head>
 <body>
+
+    <div id="particles-js"></div>
 
     <header class="main-header">
         <div class="container header-content">
             <div class="logo">
                 <img src="img/Logo.png" alt="Kyvatech Logo">
                 <img src="img/Name.png" alt="Kyvatech Logo">
-                </div>
+            </div>
             <nav class="main-nav">
-                </nav>
+                <ul>
+                    <!-- <li><a href="index.html">Accueil</a></li> -->
+                    <!-- <li><a href="about.html">À propos de moi</a></li> -->
+                </ul>
+            </nav>
             <a href="#contact" class="btn btn-primary">Contact</a>
         </div>
     </header>
 
-    <section class="hero-section parallax-container"> <div class="parallax-image" style="background-image: url('img/fond_dynamique.jpg');"></div> <div class="container hero-content">
+    <section class="hero-section">
+        <div class="container hero-content">
             <h1>Des solutions IT claires, <br>pour un avenir numérique prospère.</h1>
-            <a href="#services" class="btn btn-secondary">Découvrir nos services</a>
         </div>
     </section>
 
@@ -38,17 +70,17 @@
                 </div>
                 <div class="service-item">
                     <img src="img/serveur.png" alt="Server Database Icon">
-                    <h3>Serveur et Base de Données</h3>
-                    <p>Gestion et optimisation de vos systèmes critiques.</p>
+                    <h3>Serveur et infrastructure</h3>
+                    <p>Gestion et optimisation de vos systèmes critiques. Déploiement, Monitoring, CI-CD</p>
                 </div>
                 <div class="service-item">
                     <img src="img/cyber.png" alt="Security Icon">
                     <h3>Cybersécurité</h3>
-                    <p>Protection avancée contre les menaces numériques.</p>
+                    <p>Protection contre les menaces numériques. Vpn, FireWall, Reverse Proxy, 2FA, LDAP</p>
                 </div>
                 <div class="service-item">
                     <img src="img/depanage.png" alt="Security Icon">
-                    <h3>Dépannage</h3>
+                    <h3>Dépannage et gestion des urgences</h3>
                     <p>Service de dépanage à distance ou sur site</p>
                 </div>
                 <div class="service-item">
@@ -59,12 +91,24 @@
                 <div class="service-item">
                     <img src="img/Idebtuté.png" alt="Security Icon">
                     <h3>Identité numérique</h3>
-                    <p>Nom de Domaine, redirection d'email</p>
+                    <p>Nom de Domaine, redirection d'email </p>
                 </div>
-                </div>
+            </div>
         </div>
     </section>
 
+    <section id="partners" class="partners-section">
+        <div class="container">
+            <h2>Ils me font confiance</h2>
+            <div class="partner-tile">
+                <div class="partner-logo"><img src="img/TimTech.png" alt="TimTech Services"></div>
+                <div class="partner-logo"><img src="img/LomSecurite.png" alt="LomSecurite"></div>
+                <div class="partner-logo"><img src="img/Monworkflow.png" alt="MonWorkFlow"></div>
+                <div class="partner-logo"><img src="img/abl.png" alt="ABL Lille"></div>
+            </div>
+        </div>
+    </section>
+    
     <section id="why-kyvatech" class="why-kyvatech-section">
         <div class="container">
             <div class="why-content">
@@ -95,7 +139,6 @@
         <div class="container footer-content">
             <div class="footer-logo">
                 <img src="img/Name.png" alt="Kyvatech Footer Logo">
-
             </div>
             <div class="footer-contact">
                 <h4>Contact</h4>
@@ -105,13 +148,75 @@
                 <p>contact@kyvatech.com</p>
             </div>
             <div class="social-media">
-                </div>
+            </div>
         </div>
         <div class="footer-bottom">
             <p>&copy; 2025 Kyvatech. Tous droits réservés.</p>
         </div>
     </footer>
 
+    <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
+    <script>
+        particlesJS('particles-js', {
+            "particles": {
+                "number": {
+                    "value": 50,
+                    "density": {
+                        "enable": true,
+                        "value_area": 1000
+                    }
+                },
+                "color": { "value": "#ffffff" },
+                "shape": { "type": "circle" },
+                "opacity": {
+                    "value": 0.6,
+                    "random": true,
+                },
+                "size": {
+                    "value": 4,
+                    "random": true,
+                },
+                "line_linked": {
+                    "enable": true,
+                    "distance": 180,
+                    "color": "#ffffff",
+                    "opacity": 0.5,
+                    "width": 1.5
+                },
+                "move": {
+                    "enable": true,
+                    "speed": 0.8,
+                    "direction": "none",
+                    "random": true,
+                    "straight": false,
+                    "out_mode": "out",
+                    "bounce": false,
+                }
+            },
+            "interactivity": {
+                "detect_on": "canvas",
+                "events": {
+                    "onhover": {
+                        "enable": true,
+                        "mode": "repulse"
+                    },
+                    "onclick": {
+                        "enable": true,
+                        "mode": "push"
+                    },
+                    "resize": true
+                },
+                "modes": {
+                    "grab": {
+                        "distance": 140,
+                        "line_linked": { "opacity": 0 }
+                    },
+                    "push": { "particles_nb": 50 }
+                }
+            },
+            "retina_detect": true
+        });
+    </script>
     <script src="script.js"></script>
 </body>
 </html>

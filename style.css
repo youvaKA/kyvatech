@@ -1,64 +1,108 @@
+/* ========================================= */
+/* 1. Variables CSS et Réinitialisation     */
+/* ========================================= */
+
+:root {
+    /* Couleurs */
+    --primary-color: #002D62;          /* Bleu foncé Kyvatech */
+    --secondary-color: #2ECC71;        /* Vert électrique */
+    --text-color: #333;                /* Texte principal */
+    --light-text-color: #f4f4f4;       /* Texte clair sur fond sombre */
+    --background-dark: rgba(0, 45, 98, 0.9);
+    --background-light: rgba(255, 255, 255, 0.95);
+    --background-dark-footer: rgba(34, 34, 34, 0.95);
+    --hover-green: #28a745;
+    --hover-blue: #001f40;
+
+    /* Typographie */
+    --font-family-montserrat: 'Montserrat', sans-serif;
+    --heading-font-weight: 700;
+    --body-font-weight: 400;
+
+    /* Espacements */
+    --spacing-xs: 5px;
+    --spacing-sm: 10px;
+    --spacing-md: 20px;
+    --spacing-lg: 40px;
+    --spacing-xl: 80px;
+
+    /* Transitions */
+    --transition-duration: 0.3s;
+}
+
 /* Basic Reset & Typography */
 body {
     margin: 0;
-    font-family: 'Montserrat', sans-serif; /* Example font */
+    font-family: var(--font-family-montserrat);
     line-height: 1.6;
-    color: #333;
-    background-color: #f8f8f8; /* Light background */
+    color: var(--text-color);
+    background-color: transparent;
+    position: relative;
 }
 
 .container {
     max-width: 1200px;
     margin: 0 auto;
-    padding: 0 20px;
+    padding: 0 var(--spacing-md);
 }
 
 h1, h2, h3 {
-    color: #002D62; /* Darker blue, similar to logo */
-    margin-bottom: 20px;
+    color: var(--primary-color);
+    font-weight: var(--heading-font-weight);
+    margin-bottom: var(--spacing-md);
 }
 
 a {
     text-decoration: none;
-    color: #007bff; /* Standard link blue */
+    color: var(--primary-color);
 }
 
-/* Buttons */
+/* ========================================= */
+/* 2. Boutons                               */
+/* ========================================= */
+
 .btn {
     display: inline-block;
-    padding: 10px 20px;
+    padding: var(--spacing-sm) var(--spacing-md);
     border-radius: 5px;
-    transition: background-color 0.3s ease;
+    transition: background-color var(--transition-duration) ease, transform var(--transition-duration) ease;
     font-weight: 600;
+    text-align: center;
 }
 
 .btn-primary {
-    background-color: #2ECC71; /* Electric green from logo */
+    background-color: var(--secondary-color);
     color: white;
     border: none;
 }
 
 .btn-primary:hover {
-    background-color: #28a745;
+    background-color: var(--hover-green);
+    transform: translateY(-2px);
 }
 
 .btn-secondary {
-    background-color: #002D62; /* Dark blue from logo */
+    background-color: var(--primary-color);
     color: white;
     border: none;
 }
 
 .btn-secondary:hover {
-    background-color: #001f40;
+    background-color: var(--hover-blue);
+    transform: translateY(-2px);
 }
 
-/* Header */
+/* ========================================= */
+/* 3. En-tête (Header)                      */
+/* ========================================= */
+
 .main-header {
-    background-color: white;
-    padding: 15px 0;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-    position: relative; /* Ajouté pour s'assurer que le header est au-dessus du parallax */
-    z-index: 10; /* Pour qu'il soit au-dessus de tout */
+    background-color: var(--background-light);
+    padding: var(--spacing-md) 0;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+    position: sticky;
+    top: 0;
+    z-index: 10;
 }
 
 .header-content {
@@ -68,7 +112,7 @@ a {
 }
 
 .logo img {
-    height: 50px; /* Adjust as needed */
+    height: 45px;
 }
 
 .main-nav ul {
@@ -79,13 +123,13 @@ a {
 }
 
 .main-nav ul li {
-    margin-left: 25px;
+    margin-left: var(--spacing-md);
 }
 
 .main-nav ul li a {
-    color: #333;
+    color: var(--text-color);
     font-weight: 600;
-    padding: 5px 0;
+    padding: var(--spacing-xs) 0;
     position: relative;
 }
 
@@ -94,110 +138,103 @@ a {
     position: absolute;
     width: 0;
     height: 2px;
-    background-color: #2ECC71; /* Green accent */
+    background-color: var(--secondary-color);
     left: 0;
-    bottom: 0;
-    transition: width 0.3s ease;
+    bottom: -5px;
+    transition: width var(--transition-duration) ease;
 }
 
-.main-nav ul li a:hover::after {
+.main-nav ul li a:hover::after,
+.main-nav ul li a.active::after {
     width: 100%;
 }
 
-/* Hero Section - Modifié pour le Parallaxe */
-.hero-section { /* Cette section devient le .parallax-container */
+/* ========================================= */
+/* 4. Section principale (Hero)             */
+/* ========================================= */
+
+.hero-section {
     position: relative;
-    height: 500px; /* Ajustez la hauteur selon vos besoins */
+    height: 60vh;
+    min-height: 500px;
     display: flex;
     align-items: center;
     justify-content: center;
     color: white;
     text-align: center;
-    overflow: hidden; /* Pour contenir l'image de fond qui déborde */
-    /* background-image: url('hero_background.jpg'); REMOVE THIS LINE */
-    /* background-size: cover; REMOVE THIS LINE */
-    /* background-position: center; REMOVE THIS LINE */
-    /* filter: brightness(0.6); REMOVE THIS LINE */
-    /* z-index: -1; REMOVE THIS LINE */
+    overflow: hidden;
+    z-index: 1;
 }
 
-/* NOUVELLES RÈGLES POUR L'IMAGE DE PARALLAXE */
-.parallax-image {
-    position: absolute;
-    top: -10%; /* Permet à l'image de bouger sans laisser de vide */
-    left: -10%; /* Permet à l'image de bouger sans laisser de vide */
-    width: 120%; /* Plus large et plus haut que le conteneur pour le mouvement */
-    height: 120%; /* Plus large et plus haut que le conteneur pour le mouvement */
-    background-size: cover; /* L'image couvre l'intégralité de l'élément */
-    background-position: center center; /* Centre l'image */
-    will-change: transform; /* Indique au navigateur que la propriété 'transform' va changer, pour optimiser l'animation */
-    transition: transform 0.1s ease-out; /* Ajoute une transition douce au mouvement */
-    filter: brightness(0.6); /* Assombrir l'image pour la lisibilité du texte */
-    z-index: 1; /* Place l'image sous le contenu mais au-dessus du fond du body */
-}
-
-
-.hero-content { /* Ce sont les éléments de contenu par-dessus l'image */
-    position: relative; /* Important pour que le texte soit au-dessus de l'image */
-    z-index: 2; /* S'assure que le contenu est visible par-dessus l'image */
+.hero-content {
+    position: relative;
+    z-index: 2;
+    padding: var(--spacing-lg);
 }
 
 .hero-content h1 {
-    font-size: 3em;
-    margin-bottom: 20px;
-    color: white; /* Ensure text is white over dark background */
-    text-shadow: 2px 2px 4px rgba(0,0,0,0.5); /* Ombre pour la lisibilité */
-
+    font-size: clamp(2rem, 3vw, 3rem);
+    margin-bottom: var(--spacing-md);
+    color: white;
+    text-shadow: 0 14px 8px rgba(0,0,0,0.4);
+    line-height: 1.2;
 }
 
-/* Services Section */
+/* ========================================= */
+/* 5. Services Section                      */
+/* ========================================= */
+
 .services-section {
-    padding: 60px 0;
+    padding: var(--spacing-xl) 0;
     text-align: center;
+    background-color: var(--background-light);
 }
 
 .service-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    gap: 30px;
-    margin-top: 40px;
+    gap: var(--spacing-lg);
+    margin-top: var(--spacing-lg);
 }
 
 .service-item {
     background-color: white;
-    padding: 30px;
-    border-radius: 8px;
-    box-shadow: 0 4px 15px rgba(0,0,0,0.05);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    padding: var(--spacing-lg);
+    border-radius: 12px;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+    transition: transform var(--transition-duration) ease, box-shadow var(--transition-duration) ease;
 }
 
 .service-item:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 6px 20px rgba(0,0,0,0.1);
+    transform: translateY(-8px);
+    box-shadow: 0 8px 25px rgba(0,0,0,0.12);
 }
 
 .service-item img {
-    height: 60px; /* Adjust icon size */
-    margin-bottom: 20px;
+    height: 65px;
+    margin-bottom: var(--spacing-md);
 }
 
 .service-item h3 {
-    color: #002D62;
-    margin-bottom: 10px;
+    color: var(--primary-color);
+    margin-bottom: var(--spacing-sm);
 }
 
-/* Why Kyvatech Section */
+/* ========================================= */
+/* 6. Pourquoi Kyvatech Section             */
+/* ========================================= */
+
 .why-kyvatech-section {
-    background-color: #002D62; /* Dark blue background */
+    background-color: var(--background-dark);
     color: white;
-    padding: 80px 0;
+    padding: var(--spacing-xl) 0;
 }
 
 .why-content {
     display: flex;
     justify-content: space-between;
     align-items: flex-start;
-    gap: 50px;
+    gap: var(--spacing-lg);
 }
 
 .why-text {
@@ -206,7 +243,7 @@ a {
 
 .why-text h2 {
     color: white;
-    margin-bottom: 30px;
+    margin-bottom: var(--spacing-md);
 }
 
 .why-text ul {
@@ -215,36 +252,38 @@ a {
 }
 
 .why-text ul li {
-    margin-bottom: 15px;
+    margin-bottom: var(--spacing-sm);
     font-size: 1.1em;
 }
 
 .why-text .highlight {
-    font-weight: 700;
-    color: #2ECC71; /* Green accent */
+    font-weight: var(--heading-font-weight);
+    color: var(--secondary-color);
 }
 
 .contact-form-simple {
     flex: 1;
-    background-color: rgba(255, 255, 255, 0.1); /* Slightly transparent white */
-    padding: 30px;
+    background-color: rgba(255, 255, 255, 0.05);
+    padding: var(--spacing-md);
     border-radius: 8px;
+    box-shadow: inset 0 0 10px rgba(0,0,0,0.2);
 }
 
 .contact-form-simple h3 {
     color: white;
-    margin-bottom: 20px;
+    margin-bottom: var(--spacing-md);
 }
 
 .contact-form-simple form input,
 .contact-form-simple form textarea {
-    width: calc(100% - 20px);
-    padding: 10px;
-    margin-bottom: 15px;
-    border: 1px solid rgba(255, 255, 255, 0.3);
+    width: 100%;
+    padding: var(--spacing-sm);
+    margin-bottom: var(--spacing-md);
+    border: 1px solid rgba(255, 255, 255, 0.2);
     border-radius: 5px;
     background-color: rgba(255, 255, 255, 0.05);
     color: white;
+    box-sizing: border-box;
 }
 
 .contact-form-simple form input::placeholder,
@@ -256,88 +295,115 @@ a {
     width: 100%;
 }
 
-/* Footer */
+/* ========================================= */
+/* 7. Section Partenaires                   */
+/* ========================================= */
+.partners-section {
+    padding: var(--spacing-xl) 0;
+    text-align: center;
+    background-color: rgba(255, 255, 255, 0.8); /* Utilisation de la couleur de fond claire pour la section */
+}
+
+.partners-section h2 {
+    color: var(--primary-color);
+}
+
+.partner-tile {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: var(--spacing-lg); /* Espacement entre les logos */
+    margin-top: var(--spacing-lg);
+    background-color: white; /* Fond de la tuile */
+    padding: var(--spacing-lg);
+    border-radius: 12px; /* Coins arrondis */
+    box-shadow: 0 4px 20px rgba(0,0,0,0.08); /* Ombre douce */
+}
+
+.partner-logo img {
+    max-height: 80px;
+    width: auto;
+    max-width: 100%;
+    filter: grayscale(100%); /* Logos en noir et blanc */
+    opacity: 0.6;
+    transition: filter var(--transition-duration) ease, opacity var(--transition-duration) ease;
+}
+
+.partner-logo img:hover {
+    filter: grayscale(0%); /* Logos en couleur au survol */
+    opacity: 1;
+}
+
+/* ========================================= */
+/* 8. Pied de page (Footer)                 */
+/* ========================================= */
+
 .main-footer {
-    background-color: #222; /* Dark footer */
-    color: white;
-    padding: 40px 0 20px;
+    background-color: var(--background-dark-footer);
+    color: var(--light-text-color);
+    padding: var(--spacing-lg) 0 var(--spacing-md);
 }
 
 .footer-content {
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
-    gap: 30px;
+    gap: var(--spacing-md);
 }
 
 .footer-logo img {
-    height: 40px; /* Adjust footer logo size */
+    height: 40px;
 }
 
-.footer-links,
-.footer-contact,
-.social-media {
-    flex: 1;
-    min-width: 180px; /* Ensure columns don't get too narrow */
+.footer-contact {
+    min-width: 180px;
 }
 
-.footer-links h4,
-.footer-contact h4,
-.social-media h4 {
-    color: #2ECC71; /* Green accent for headings */
-    margin-bottom: 15px;
-}
-
-.footer-links ul {
-    list-style: none;
-    padding: 0;
-}
-
-.footer-links ul li {
-    margin-bottom: 8px;
-}
-
-.footer-links ul li a {
-    color: rgba(255, 255, 255, 0.7);
-}
-
-.footer-links ul li a:hover {
-    color: white;
+.footer-contact h4 {
+    color: var(--secondary-color);
+    margin-bottom: var(--spacing-sm);
 }
 
 .footer-contact p {
-    margin-bottom: 8px;
+    margin-bottom: var(--spacing-xs);
     font-size: 0.9em;
-}
-
-.social-media img {
-    height: 30px;
-    margin-right: 10px;
 }
 
 .footer-bottom {
     text-align: center;
-    padding-top: 20px;
-    margin-top: 30px;
+    padding-top: var(--spacing-md);
+    margin-top: var(--spacing-lg);
     border-top: 1px solid rgba(255, 255, 255, 0.1);
     font-size: 0.8em;
     color: rgba(255, 255, 255, 0.5);
 }
 
-/* Basic Responsiveness (for smaller screens) */
+/* ========================================= */
+/* 9. Responsivité (Media Queries)          */
+/* ========================================= */
+
 @media (max-width: 768px) {
     .header-content {
         flex-direction: column;
-        text-align: center;
+        gap: var(--spacing-md);
+    }
+    
+    .main-nav {
+        width: 100%;
     }
 
     .main-nav ul {
         flex-direction: column;
-        margin-top: 15px;
+        align-items: center;
     }
 
     .main-nav ul li {
-        margin: 5px 0;
+        margin: var(--spacing-xs) 0;
+    }
+    
+    .main-nav ul li a::after {
+        display: none;
     }
 
     .hero-content h1 {
@@ -352,16 +418,13 @@ a {
         flex-direction: column;
     }
 
+    .contact-form-simple {
+        width: 100%;
+        margin-top: var(--spacing-md);
+    }
+
     .footer-content {
         flex-direction: column;
         text-align: center;
-    }
-
-    .footer-links,
-    .footer-contact,
-    .social-media {
-        min-width: unset;
-        width: 100%;
-        margin-bottom: 20px;
     }
 }
