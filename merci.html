@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Merci pour votre message - Kyvatech</title>
+    <link rel="icon" type="image/x-icon" href="/img/Logo.ico">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style-merci.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <div id="particles-js"></div>
+    
+    <!-- Animation de confettis -->
+    <div id="confetti-container"></div>
+
+    <header class="main-header">
+        <div class="container header-content">
+            <div class="logo">
+                <img src="img/Logo.png" alt="Kyvatech Logo">
+                <img src="img/Name.png" alt="Kyvatech Logo">
+            </div>
+
+            <nav class="main-nav">
+                <ul>
+                    <li><a href="index.html">Accueil</a></li>
+                    <li><a href="about.html">À propos de moi</a></li>
+                </ul>
+            </nav>
+            <a href="index.html#contact-form-simple" class="btn btn-primary">Contact</a>
+
+            <div class="menu-toggle" id="mobile-menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </header>
+
+    <main class="thank-you-page">
+        <div class="container">
+            <div class="thank-you-content">
+                <div class="success-icon">
+                    <div class="checkmark">
+                        <svg viewBox="0 0 52 52">
+                            <circle class="checkmark-circle" cx="26" cy="26" r="25" fill="none"/>
+                            <path class="checkmark-check" fill="none" d="m14.1 27.2l7.1 7.2 16.7-16.8"/>
+                        </svg>
+                    </div>
+                </div>
+                
+                <h1>Merci pour votre message !</h1>
+                
+                <div class="thank-you-message">
+                    <p class="main-message">
+                        Votre message a été envoyé avec succès. Je vous remercie pour votre intérêt pour mes services.
+                    </p>
+                    
+                    <p class="response-info">
+                        <strong>Je vous répondrai dans les plus brefs délais</strong>, généralement sous 24 heures.
+                    </p>
+                    
+                    <div class="next-steps">
+                        <h3>En attendant ma réponse :</h3>
+                        <ul>
+                            <li>Consultez mes <a href="about.html">expériences professionnelles</a></li>
+                            <li>Découvrez mes <a href="index.html#services">solutions IT</a></li>
+                            <li>Connectez-vous avec moi sur les réseaux sociaux</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="action-buttons">
+                    <a href="index.html" class="btn btn-primary">Retour à l'accueil</a>
+                    <a href="about.html" class="btn btn-secondary">En savoir plus</a>
+                </div>
+                
+                <div class="contact-info">
+                    <p><strong>Contact direct :</strong></p>
+                    <p>📧 contact@kyvatech.com</p>
+                    <p>📞 +33 7 69 35 79 77</p>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer class="main-footer">
+        <div class="container footer-content">
+            <div class="footer-logo">
+                <img src="img/Name.png" alt="Kyvatech Footer Logo">
+            </div>
+            <div class="footer-contact">
+                <h4>Contact</h4>
+                <p>Youva KAOUI</p>
+                <p>110 RUE de Fontenay
+                    94300 Vincennes FRANCE</p>
+                <p>+33 7 69 35 79 77</p>
+                <p>contact@kyvatech.com</p>
+            </div>
+            <div class="social-media">
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2025 Kyvatech. Tous droits réservés.</p>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
+    <script>
+        particlesJS('particles-js', {
+            "particles": {
+                "number": {
+                    "value": 30,
+                    "density": {
+                        "enable": true,
+                        "value_area": 800
+                    }
+                },
+                "color": { "value": "#ffffff" },
+                "shape": { "type": "circle" },
+                "opacity": {
+                    "value": 0.3,
+                    "random": false,
+                },
+                "size": {
+                    "value": 3,
+                    "random": true,
+                },
+                "line_linked": {
+                    "enable": true,
+                    "distance": 150,
+                    "color": "#ffffff",
+                    "opacity": 0.2,
+                    "width": 1
+                },
+                "move": {
+                    "enable": true,
+                    "speed": 1,
+                    "direction": "none",
+                    "random": false,
+                    "straight": false,
+                    "out_mode": "out",
+                    "bounce": false,
+                }
+            },
+            "interactivity": {
+                "detect_on": "canvas",
+                "events": {
+                    "onhover": {
+                        "enable": true,
+                        "mode": "grab"
+                    },
+                    "onclick": {
+                        "enable": true,
+                        "mode": "push"
+                    },
+                    "resize": true
+                },
+                "modes": {
+                    "grab": {
+                        "distance": 140,
+                        "line_linked": { "opacity": 0.5 }
+                    },
+                    "push": { "particles_nb": 4 }
+                }
+            },
+            "retina_detect": true
+        });
+    </script>
+    <script src="confetti.js"></script>
+</body>
+</html>
