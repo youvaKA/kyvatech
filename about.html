@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>À propos de moi - Kyvatech</title>
+    <link rel="icon" type="image/x-icon" href="/img/Logo.ico">
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="style-about.css">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
@@ -22,43 +23,52 @@
                 <nav class="main-nav">
                     <ul>
                         <li><a href="index.html">Accueil</a></li>
-                        <li><a href="a_propos.html">À propos de moi</a></li>
+                        <li><a href="about.html">À propos de moi</a></li>
                     </ul>
                 </nav>
-                <a href="index.html#contact" class="btn btn-primary">Contact</a>
+                <a href="#contact-form-simple" class="btn btn-primary">Contact</a>
             </div>
         </header>
 
         <main class="about-page">
             <div class="photo-bubble">
-                <img src="img/votre-photo.jpg" alt="Votre photo de profil">
+                <img src="img/PP.png" alt="Votre photo de profil">
             </div>
             <div class="container about-content">
                 <h1>À propos de moi</h1>
                 <div class="about-section">
                     <h2>En quelques mots</h2>
                     <p class="summary-text">
-                        En tant que professionnel DevOps, ma mission est de vous aider à mettre en place un pipeline CI/CD robuste. Mon objectif est d'optimiser les processus de développement, de garantir la fiabilité des applications et d'automatiser les déploiements. Je suis passionné par l'amélioration continue et l'innovation.
+                        En tant que professionnel DevOps&Cloud, ma mission est de vous aider à mettre en place et maintenir vôtre infrastructure. Mon objectif est d'optimiser les processus de développement, de garantir la fiabilité des applications et d'automatiser les déploiements.
                     </p>
                     <h3>Mon expertise se concentre sur :</h3>
                     <ul>
                         <li>
-                            **Infrastructure as Code (IaC)** : Maîtrise de Terraform et Ansible pour une gestion automatisée des infrastructures et du cloud.
+                            <p class="job-title">Infrastructure as Code :</p>  Maîtrise de Terraform, Ansible pour une gestion automatisée des infrastructures et du cloud.
                         </li>
                         <li>
-                            **Conteneurisation et Orchestration** : Expérience avec Docker et Kubernetes pour une gestion efficace des microservices.
+                           <p class="job-title">Conteneurisation et Orchestration :</p> Expérience avec Docker et Kubernetes pour une gestion efficace des microservices.
                         </li>
                         <li>
-                            **CI/CD** : Mise en place de pipelines d'intégration et de déploiement continus avec des outils comme GitLab CI/CD.
+                            <p class="job-title">CI/CD :</p> Mise en place de pipelines d'intégration et de déploiement continus avec des outils comme GitLab CI/CD.
                         </li>
                         <li>
-                            **Surveillance et Observabilité** : Utilisation de Prometheus et Grafana pour une visibilité complète sur la santé des systèmes.
+                            <p class="job-title">Surveillance et Observabilité :</p> Utilisation de Prometheus et Grafana pour une visibilité complète sur la santé des systèmes.
                         </li>
                     </ul>
                     <p class="contact-info">
-                        Si vous avez un projet ou si vous souhaitez en savoir plus sur la façon dont je peux aider votre entreprise dans sa transformation DevOps, n'hésitez pas à me contacter.
+                        
+                        Si vous avez un projet ou si vous souhaitez en savoir plus sur la façon dont je peux aider votre entreprise dans sa transformation DevOps.
+                        <br>
+                        Vous Avez déja une infrastructure en place, je peux vous aider à l'optimiser.
+                        <br>
+                        Vous avez besoin d'une migration vers le cloud, je peux vous aider à la planifier.
+                        <br>
+                        Vous avez besoins d'une infrastructure en partant de zéro, je peux vous aider à la mettre en place.
+                        <br>
+                        Quelque soit votre besoin, n'hésitez pas à me contacter, enssemble nous trouverons la solutions la plus optimisé .
                     </p>
-                </div>
+                </div>  
 
                 <div class="experience-section">
                     <h2>Expériences professionnelles</h2>
@@ -71,16 +81,23 @@
                         <p class="job-location">Lille, France</p>
                         <p class="job-title">DevOps / SRE</p>
                         <p class="job-description">
-                            Conseil et audit de l'infrastructure SI, de la mise en place d'infrastructures complexes, de pipelines DevOps ainsi que de l'automatisation.
-                            Mise en place de solutions sur mesure pour la migration de SI vers le Cloud, la mise en place de la gouvernance, et l'amélioration de la scalabilité et de la sécurité.
+                            Conseil et audit EN infrastructure SI. Mise en place d'infrastructures complexes, de pipelines DevOps ainsi que de l'automatisation des processus de déploiement.
+                            Mise en place de solutions sur mesure pour la migration de SI vers le Cloud, la mise en place de la système de Surveillance, et l'amélioration de la scalabilité et de la sécurité.
                             Utilisation de divers logiciels, notamment Grafana et Prometheus, pour le monitoring et la supervision.
                         </p>
                         <div class="skills-list">
+                            <span class="skill">Terraform</span>
+                            <span class="skill">Ansible</span>
+                            <span class="skill">Docker</span>
                             <span class="skill">Kubernetes</span>
-                            <span class="skill">Promos</span>
+                            <span class="skill">Proxmox</span>
                             <span class="skill">LXC</span>
                             <span class="skill">GitLab CI/CD</span>
                             <span class="skill">Nginx</span>
+                            <span class="skill">Traefik</span>
+                            <span class="skill">Prometheus</span>
+                            <span class="skill">Grafana</span>
+                            <span class="skill">VPN</span>
                         </div>
                     </div>
 
@@ -93,9 +110,10 @@
                         <p class="job-title">DevOps Infrastructure</p>
                         <p class="job-description">
                             Responsable de la mise en place de l'infrastructure informatique de TimTech, déployée et configurée avec Proxmox.
-                            L'architecture est virtualisée et est basée sur la virtualisation Proxmox et le déploiement de conteneurs LXC et Docker.
+                            L'architecture est virtualisée et est basée sur la virtualisation Proxmox et le déploiement de conteneurs LXC et VM.
                             Mise en place d'un réseau sécurisé pour assurer la sécurité et la fiabilité du système, avec des pare-feu et des VLAN pour isoler les environnements.
                             Déploiement d'outils de supervision pour le monitoring et la maintenance.
+                            Ainsi que des tunels VPN pour assurer la sécurité des communications.
                         </p>
                         <div class="skills-list">
                             <span class="skill">Proxmox</span>
@@ -103,6 +121,8 @@
                             <span class="skill">Windows Server</span>
                             <span class="skill">Nginx</span>
                             <span class="skill">Traefik</span>
+                            <span class="skill">VPN</span>
+                            <span class="skill">DNS</span>
                         </div>
                     </div>
 
@@ -115,7 +135,7 @@
                         <p class="job-title">Ingénieur DevOps</p>
                         <p class="job-description">
                             Stage de 3 mois. J'ai été responsable de la création d'un tableau de bord de supervision avec Grafana et Prometheus.
-                            Mon travail a également inclus l'installation et la configuration de VM sous VMware ESXi, la gestion des accès et des droits des responsables, et la résolution des problèmes liés aux logiciels.
+                            Mon travail a également inclus l'installation et la configuration de VM sous VMware ESXi, la gestion des accès et des droits des responsables, et la résolution des problèmes liés aux logiciels et aux réseaux.
                         </p>
                         <div class="skills-list">
                             <span class="skill">Grafana</span>
@@ -123,27 +143,35 @@
                             <span class="skill">Traefik</span>
                             <span class="skill">DNS</span>
                             <span class="skill">VMware ESXi</span>
+                            <span class="skill">Virtualisation</span>
+                            <span class="skill">Supervision</span>
+                            <span class="skill">Réseau</span>
+                            <span class="skill">Scripting</span>
                         </div>
                     </div>
 
                     <div class="job-item">
                         <div class="job-header">
-                            <h3>Conseil départemental du sang (EFS)</h3>
+                            <h3>Etablissement Français du Sang (EFS)</h3>
                             <span class="job-duration">Janvier 2024 - Mars 2024 (3 mois)</span>
                         </div>
                         <p class="job-location">Lille, France</p>
                         <p class="job-title">Technicien d'exploitation</p>
                         <p class="job-description">
-                            Stage de 3 mois. J'ai effectué l'installation et la mise en place de systèmes publicitaires incluant la configuration et la maintenance du système.
-                            J'ai géré le monitoring et la supervision des systèmes, le support technique et la résolution des problèmes.
-                            Mon rôle a été d'assurer la maintenance du parc informatique, la mise à jour régulière et l'installation de logiciels pour garantir une diffusion continue et efficace des informations.
+                            Mission de 3 mois : Déploiement, automatisation et gestion de bases de données
+
+                            Déploiement de masse : Installation et configuration de MDT pour le déploiement de systèmes d'exploitation (OS) via PXE sur plusieurs centaines de PC.
+                            Automatisation et sécurité : Automatisation du déploiement de Windows, sécurisation des configurations, et vérification du bon fonctionnement.
+                            Gestion des bases de données : Clonage de bases de données pour les environnements de développement et de test.
+                            Haute disponibilité : Mise en place d'un système maître-esclave pour assurer la réplication des données et la continuité de service.
+                            Gestion de la mobilité : Enrôlement de téléphones Android et création de profils professionnels.
                         </p>
                         <div class="skills-list">
                             <span class="skill">MDT</span>
                             <span class="skill">Office 365</span>
-                            <span class="skill">Linux</span>
-                            <span class="skill">DevOps</span>
-                            <span class="skill">LXC</span>
+                            <span class="skill">Windows</span>
+                            <span class="skill">Android</span>
+                            
                         </div>
                     </div>
                     <div class="job-item">
@@ -195,6 +223,7 @@
                 </div>
                 <div class="footer-contact">
                     <h4>Contact</h4>
+                    <p>Youva KAOUI</p>
                     <p>110 RUE de Fontenay
                         94300 Vincennes FRANCE</p>
                     <p>+33 7 69 35 79 77</p>
