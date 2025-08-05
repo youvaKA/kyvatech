@@ -55,10 +55,10 @@
 
     <header class="main-header">
         <div class="container header-content">
-            <a href="index.html" class="logo">
+            <div class="logo">
                 <img src="img/Logo.png" alt="Kyvatech Logo">
                 <img src="img/Name.png" alt="Kyvatech Logo">
-            </a>
+            </div>
 
             <nav class="main-nav">
                 <ul>
@@ -66,7 +66,7 @@
                     <li><a href="about.html">À propos de moi</a></li>
                 </ul>
             </nav>
-            <a href="#contact-form-simple" class="btn btn-primary">Contact</a>
+            <a href="#contact-Section" class="btn btn-primary">Contact</a>
 
             <div class="menu-toggle" id="mobile-menu">
                 <span></span>
@@ -143,7 +143,7 @@
         <div class="container">
             <div class="why-content">
                 <div class="why-text">
-                    <h2>Pourquoi Kyvatech ?</h2>
+                    <h2  >Pourquoi Kyvatech ?</h2>
                     <ul>
                         <li><span class="highlight">Expertise :</span> Professionnel aguerris à votre écoute.</li>
                         <li><span class="highlight">Fiabilité :</span> Des solutions claires et simples pour une stabilité et durabilité optimal.</li>
@@ -151,10 +151,9 @@
                     </ul>
                 </div>
 
-
                 <div class="contact-form-simple">
                     <h3>Contactez-moi.</h3>
-                    <form action="https://api.web3forms.com/submit" method="POST">
+                    <form id="contact-Section" action="https://api.web3forms.com/submit" method="POST">
                         <input type="hidden" name="access_key" value="92000847-e21d-45ba-b44e-0c9ca2181d29">
                         <input type="hidden" name="redirect" value="https://kyvatech.com/merci.html"> <input type="checkbox" name="botcheck" class="hidden" style="display: none;">
 
