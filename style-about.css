@@ -199,8 +199,35 @@ h1 {
 
 /* Adaptations pour la réactivité */
 @media (max-width: 768px) {
+    main.about-page {
+        padding-top: 150px;
+    }
+    
+    .photo-bubble {
+        width: 150px;
+        height: 150px;
+        top: 60px;
+    }
+
+    h1 {
+        padding-top: 0;
+        font-size: 2em;
+    }
+
+    .about-section h2, .experience-section h2 {
+        font-size: 1.5em;
+    }
+
     .job-header {
         flex-direction: column;
         align-items: flex-start;
+    }
+
+    .job-duration {
+        font-size: 0.85em;
+    }
+
+    .job-description {
+        font-size: 0.9em;
     }
 }
