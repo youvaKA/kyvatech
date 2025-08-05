@@ -19,6 +19,10 @@ body {
     color: var(--text-color);
 }
 
+* {
+    box-sizing: border-box;
+}
+
 #particles-js {
     position: fixed;
     top: 0;
@@ -51,6 +55,8 @@ main.about-page {
     max-width: 1200px;
     margin: 0 auto;
     padding: 0 var(--spacing-md);
+    box-sizing: border-box;
+    width: 100%;
 }
 
 .photo-bubble {
@@ -189,11 +195,15 @@ h1 {
 }
 
 @media (max-width: 768px) {
+    /* Amélioration du conteneur pour les petits écrans */
+    .about-content {
+        padding: 0 var(--spacing-sm);
+        max-width: 100%;
+        gap: var(--spacing-md);
+    }
+    
     main.about-page {
         padding-top: 50px;
-    }
-    .about-content {
-        gap: var(--spacing-md);
     }
     .photo-bubble {
         position: static;
@@ -213,5 +223,26 @@ h1 {
     }
     .job-duration {
         order: -1;
+    }
+}
+
+/* Media query pour les très petits écrans */
+@media (max-width: 480px) {
+    .about-content {
+        padding: 0 var(--spacing-xs);
+    }
+    
+    h1 {
+        font-size: 1.8em;
+        padding: 0 var(--spacing-xs);
+    }
+    
+    .about-section, .experience-section {
+        padding: var(--spacing-sm);
+        margin: 0 var(--spacing-xs);
+    }
+    
+    .job-item {
+        padding: var(--spacing-sm);
     }
 }
