@@ -24,8 +24,6 @@
 </head>
 <body>
 
-    <div id="particles-js"></div>
-
     <header class="main-header">
         <div class="container header-content">
             <a href="index.html" class="logo">
@@ -50,273 +48,249 @@
         </div>
     </header>
 
-        <main class="about-page">
-            <div class="photo-bubble">
-                <img src="img/PP.png" alt="Votre photo de profil">
+    <main class="about-page">
+        <!-- Profile Hero -->
+        <section class="profile-hero">
+            <div class="profile-hero-bg">
+                <div class="profile-gradient"></div>
+                <div class="profile-grid-overlay"></div>
             </div>
-            <div class="container about-content">
-                <h1>À propos de Youva KAOUI - Expert DevOps & Infrastructure Cloud</h1>
-                <div class="about-section">
-                    <h2>Consultant DevOps & cloud spécialisé en transformation numérique</h2>
-                    <p class="summary-text">
-                        En tant que consultant DevOps et expert infrastructure cloud, ma mission est de vous accompagner dans votre transformation numérique. Spécialisé dans l'automatisation, l'optimisation des processus de développement et la sécurisation des environnements IT, je garantis la fiabilité et la performance de vos applications.
-                    </p>
-                    <h3>Mon expertise DevOps se concentre sur :</h3>
-                    <ul>
-                        <li>
-                            <p class="job-title">Infrastructure as Code (IaC) :</p> Expertise avancée en Terraform et Ansible pour une gestion automatisée et reproductible des infrastructures cloud et on-premise.
-                        </li>
-                        <li>
-                           <p class="job-title">Conteneurisation et Orchestration :</p> Maîtrise complète de Docker et Kubernetes pour déploiement, scaling et gestion efficace des microservices en production.
-                        </li>
-                        <li>
-                            <p class="job-title">Pipelines CI/CD avancés :</p> Conception et implémentation de pipelines d'intégration continue avec GitLab CI/CD, Jenkins et GitHub Actions pour accélérer les déploiements.
-                        </li>
-                        <li>
-                            <p class="job-title">Monitoring et Observabilité :</p> Mise en place de solutions de surveillance complètes avec Prometheus, Grafana, ELK Stack pour une visibilité totale sur la santé des systèmes.
-                        </li>
-                    </ul>
-                    <p class="contact-info">
-                        Basé dans la région de Lille, j'interviens partout en France , Belgique et en Distanciel pour vos projets de transformation DevOps et migration cloud.
-                        <br><br>
-                        <strong>Vous avez déjà une infrastructure ?</strong> Je peux l'auditer et l'optimiser pour améliorer performances et sécurité.
-                        <br>
-                        <strong>Migration vers le cloud ?</strong> Je vous accompagne dans la planification et l'exécution de votre stratégie cloud.
-                        <br>
-                        <strong>Nouveau projet infrastructure ?</strong> Nous concevons ensemble une architecture moderne, scalable et sécurisée.
-                        <br><br>
-                        Quel que soit votre besoin en DevOps et infrastructure cloud, contactons-nous pour définir ensemble la solution la plus adaptée à vos enjeux business.
-                    </p>
-                </div>  
-
-                <div class="experience-section">
-                    <h2>Expériences professionnelles</h2>
-
-                    <div class="job-item">
-                        <div class="job-header">
-                            <h3>Création de Kyvatech</h3>
-                            <span class="job-duration">Janvier 2025 - aujourd'hui (7 mois)</span>
+            <div class="container">
+                <div class="profile-card">
+                    <div class="profile-photo">
+                        <img src="img/PP.png" alt="Youva KAOUI - Consultant DevOps">
+                        <div class="photo-ring"></div>
+                    </div>
+                    <div class="profile-info">
+                        <div class="hero-badge">
+                            <span class="badge-dot"></span>
+                            <span>Disponible pour missions</span>
                         </div>
-                        <p class="job-location">Lille, France</p>
-                        <p class="job-title">DevOps / SRE</p>
-                        <p class="job-description">
-                            Conseil et audit EN infrastructure SI. Mise en place d'infrastructures complexes, de pipelines DevOps ainsi que de l'automatisation des processus de déploiement.
-                            Mise en place de solutions sur mesure pour la migration de SI vers le Cloud, la mise en place de la système de Surveillance, et l'amélioration de la scalabilité et de la sécurité.
-                            Utilisation de divers logiciels, notamment Grafana et Prometheus, pour le monitoring et la supervision.
-                        </p>
-                        <div class="skills-list">
-                            <span class="skill">Terraform</span>
-                            <span class="skill">Ansible</span>
-                            <span class="skill">Docker</span>
-                            <span class="skill">Kubernetes</span>
-                            <span class="skill">Proxmox</span>
-                            <span class="skill">LXC</span>
-                            <span class="skill">GitLab CI/CD</span>
-                            <span class="skill">Nginx</span>
-                            <span class="skill">Traefik</span>
-                            <span class="skill">Prometheus</span>
-                            <span class="skill">Grafana</span>
-                            <span class="skill">VPN</span>
+                        <h1>Youva KAOUI</h1>
+                        <p class="profile-role">Expert DevOps & Infrastructure Cloud</p>
+                        <p class="profile-location">📍 Lille, France · Remote · Belgique</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Expertise Section -->
+        <section class="about-expertise">
+            <div class="container">
+                <div class="section-header">
+                    <span class="section-tag">Expertise</span>
+                    <h2 class="section-title">Transformation numérique</h2>
+                </div>
+                <div class="expertise-intro">
+                    <p>En tant que consultant DevOps et expert infrastructure cloud, ma mission est de vous accompagner dans votre transformation numérique. Spécialisé dans l'automatisation, l'optimisation des processus de développement et la sécurisation des environnements IT, je garantis la fiabilité et la performance de vos applications.</p>
+                </div>
+                <div class="expertise-grid">
+                    <div class="expertise-card">
+                        <div class="expertise-icon">⚙️</div>
+                        <h3>Infrastructure as Code (IaC)</h3>
+                        <p>Expertise avancée en Terraform et Ansible pour une gestion automatisée et reproductible des infrastructures cloud et on-premise.</p>
+                    </div>
+                    <div class="expertise-card">
+                        <div class="expertise-icon">🐳</div>
+                        <h3>Conteneurisation & Orchestration</h3>
+                        <p>Maîtrise complète de Docker et Kubernetes pour déploiement, scaling et gestion efficace des microservices en production.</p>
+                    </div>
+                    <div class="expertise-card">
+                        <div class="expertise-icon">⚡</div>
+                        <h3>Pipelines CI/CD avancés</h3>
+                        <p>Conception et implémentation de pipelines d'intégration continue avec GitLab CI/CD, Jenkins et GitHub Actions pour accélérer les déploiements.</p>
+                    </div>
+                    <div class="expertise-card">
+                        <div class="expertise-icon">��</div>
+                        <h3>Monitoring & Observabilité</h3>
+                        <p>Mise en place de solutions de surveillance complètes avec Prometheus, Grafana, ELK Stack pour une visibilité totale sur la santé des systèmes.</p>
+                    </div>
+                </div>
+                <div class="expertise-cta">
+                    <p><strong>Vous avez déjà une infrastructure ?</strong> Je peux l'auditer et l'optimiser pour améliorer performances et sécurité.</p>
+                    <p><strong>Migration vers le cloud ?</strong> Je vous accompagne dans la planification et l'exécution de votre stratégie cloud.</p>
+                    <p><strong>Nouveau projet infrastructure ?</strong> Nous concevons ensemble une architecture moderne, scalable et sécurisée.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Experience Section -->
+        <section class="about-experience">
+            <div class="container">
+                <div class="section-header">
+                    <span class="section-tag">Parcours</span>
+                    <h2 class="section-title">Expériences professionnelles</h2>
+                </div>
+                <div class="timeline">
+                    <div class="timeline-item">
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-card">
+                            <div class="timeline-header">
+                                <div>
+                                    <h3>Création de Kyvatech</h3>
+                                    <span class="timeline-role">DevOps / SRE</span>
+                                </div>
+                                <span class="timeline-date">Jan 2025 - Présent</span>
+                            </div>
+                            <p class="timeline-location">📍 Lille, France</p>
+                            <p class="timeline-desc">Conseil et audit en infrastructure SI. Mise en place d'infrastructures complexes, de pipelines DevOps ainsi que de l'automatisation des processus de déploiement. Mise en place de solutions sur mesure pour la migration de SI vers le Cloud, la mise en place de système de Surveillance, et l'amélioration de la scalabilité et de la sécurité. Utilisation de divers logiciels, notamment Grafana et Prometheus, pour le monitoring et la supervision.</p>
+                            <div class="timeline-skills">
+                                <span>Terraform</span><span>Ansible</span><span>Docker</span><span>Kubernetes</span><span>Proxmox</span><span>LXC</span><span>GitLab CI/CD</span><span>Nginx</span><span>Traefik</span><span>Prometheus</span><span>Grafana</span><span>VPN</span>
+                            </div>
                         </div>
                     </div>
-
-                    <div class="job-item">
-                        <div class="job-header">
-                            <h3>Timtech</h3>
-                            <span class="job-duration">Août 2024 - Février 2025 (7 mois)</span>
-                        </div>
-                        <p class="job-location">Lille, France</p>
-                        <p class="job-title">DevOps Infrastructure</p>
-                        <p class="job-description">
-                            Responsable de la mise en place de l'infrastructure informatique de TimTech, déployée et configurée avec Proxmox.
-                            L'architecture est virtualisée et est basée sur la virtualisation Proxmox et le déploiement de conteneurs LXC et VM.
-                            Mise en place d'un réseau sécurisé pour assurer la sécurité et la fiabilité du système, avec des pare-feu et des VLAN pour isoler les environnements.
-                            Déploiement d'outils de supervision pour le monitoring et la maintenance.
-                            Ainsi que des tunels VPN pour assurer la sécurité des communications.
-                        </p>
-                        <div class="skills-list">
-                            <span class="skill">Proxmox</span>
-                            <span class="skill">LXC</span>
-                            <span class="skill">Windows Server</span>
-                            <span class="skill">Nginx</span>
-                            <span class="skill">Traefik</span>
-                            <span class="skill">VPN</span>
-                            <span class="skill">DNS</span>
+                    <div class="timeline-item">
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-card">
+                            <div class="timeline-header">
+                                <div>
+                                    <h3>Timtech</h3>
+                                    <span class="timeline-role">DevOps Infrastructure</span>
+                                </div>
+                                <span class="timeline-date">Août 2024 - Fév 2025</span>
+                            </div>
+                            <p class="timeline-location">📍 Lille, France</p>
+                            <p class="timeline-desc">Responsable de la mise en place de l'infrastructure informatique de TimTech, déployée et configurée avec Proxmox. L'architecture est virtualisée et est basée sur la virtualisation Proxmox et le déploiement de conteneurs LXC et VM. Mise en place d'un réseau sécurisé pour assurer la sécurité et la fiabilité du système, avec des pare-feu et des VLAN pour isoler les environnements. Déploiement d'outils de supervision pour le monitoring et la maintenance. Ainsi que des tunnels VPN pour assurer la sécurité des communications.</p>
+                            <div class="timeline-skills">
+                                <span>Proxmox</span><span>LXC</span><span>Windows Server</span><span>Nginx</span><span>Traefik</span><span>VPN</span><span>DNS</span>
+                            </div>
                         </div>
                     </div>
-
-                    <div class="job-item">
-                        <div class="job-header">
-                            <h3>Actem-IT</h3>
-                            <span class="job-duration">Juillet 2024 - Août 2024 (2 mois)</span>
-                        </div>
-                        <p class="job-location">Lille, France</p>
-                        <p class="job-title">Ingénieur DevOps</p>
-                        <p class="job-description">
-                            Stage de 3 mois. J'ai été responsable de la création d'un tableau de bord de supervision avec Grafana et Prometheus.
-                            Mon travail a également inclus l'installation et la configuration de VM sous VMware ESXi, la gestion des accès et des droits des responsables, et la résolution des problèmes liés aux logiciels et aux réseaux.
-                        </p>
-                        <div class="skills-list">
-                            <span class="skill">Grafana</span>
-                            <span class="skill">Prometheus</span>
-                            <span class="skill">Traefik</span>
-                            <span class="skill">DNS</span>
-                            <span class="skill">VMware ESXi</span>
-                            <span class="skill">Virtualisation</span>
-                            <span class="skill">Supervision</span>
-                            <span class="skill">Réseau</span>
-                            <span class="skill">Scripting</span>
+                    <div class="timeline-item">
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-card">
+                            <div class="timeline-header">
+                                <div>
+                                    <h3>Actem-IT</h3>
+                                    <span class="timeline-role">Ingénieur DevOps</span>
+                                </div>
+                                <span class="timeline-date">Juil 2024 - Août 2024</span>
+                            </div>
+                            <p class="timeline-location">📍 Lille, France</p>
+                            <p class="timeline-desc">Stage de 3 mois. J'ai été responsable de la création d'un tableau de bord de supervision avec Grafana et Prometheus. Mon travail a également inclus l'installation et la configuration de VM sous VMware ESXi, la gestion des accès et des droits des responsables, et la résolution des problèmes liés aux logiciels et aux réseaux.</p>
+                            <div class="timeline-skills">
+                                <span>Grafana</span><span>Prometheus</span><span>Traefik</span><span>DNS</span><span>VMware ESXi</span><span>Virtualisation</span><span>Supervision</span><span>Réseau</span><span>Scripting</span>
+                            </div>
                         </div>
                     </div>
-
-                    <div class="job-item">
-                        <div class="job-header">
-                            <h3>Etablissement Français du Sang (EFS)</h3>
-                            <span class="job-duration">Janvier 2024 - Mars 2024 (3 mois)</span>
-                        </div>
-                        <p class="job-location">Lille, France</p>
-                        <p class="job-title">Technicien d'exploitation</p>
-                        <p class="job-description">
-                            Mission de 3 mois : Déploiement, automatisation et gestion de bases de données
-
-                            Déploiement de masse : Installation et configuration de MDT pour le déploiement de systèmes d'exploitation (OS) via PXE sur plusieurs centaines de PC.
-                            Automatisation et sécurité : Automatisation du déploiement de Windows, sécurisation des configurations, et vérification du bon fonctionnement.
-                            Gestion des bases de données : Clonage de bases de données pour les environnements de développement et de test.
-                            Haute disponibilité : Mise en place d'un système maître-esclave pour assurer la réplication des données et la continuité de service.
-                            Gestion de la mobilité : Enrôlement de téléphones Android et création de profils professionnels.
-                        </p>
-                        <div class="skills-list">
-                            <span class="skill">MDT</span>
-                            <span class="skill">Office 365</span>
-                            <span class="skill">Windows</span>
-                            <span class="skill">Android</span>
-                            
+                    <div class="timeline-item">
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-card">
+                            <div class="timeline-header">
+                                <div>
+                                    <h3>Établissement Français du Sang (EFS)</h3>
+                                    <span class="timeline-role">Technicien d'exploitation</span>
+                                </div>
+                                <span class="timeline-date">Jan 2024 - Mars 2024</span>
+                            </div>
+                            <p class="timeline-location">📍 Lille, France</p>
+                            <p class="timeline-desc">Mission de 3 mois : Déploiement, automatisation et gestion de bases de données. Déploiement de masse : Installation et configuration de MDT pour le déploiement de systèmes d'exploitation (OS) via PXE sur plusieurs centaines de PC. Automatisation et sécurité : Automatisation du déploiement de Windows, sécurisation des configurations, et vérification du bon fonctionnement. Gestion des bases de données : Clonage de bases de données pour les environnements de développement et de test. Haute disponibilité : Mise en place d'un système maître-esclave pour assurer la réplication des données et la continuité de service. Gestion de la mobilité : Enrôlement de téléphones Android et création de profils professionnels.</p>
+                            <div class="timeline-skills">
+                                <span>MDT</span><span>Office 365</span><span>Windows</span><span>Android</span>
+                            </div>
                         </div>
                     </div>
-                    <div class="job-item">
-                        <div class="job-header">
-                            <h3>Timtech</h3>
-                            <span class="job-duration">Novembre 2023 - Janvier 2024 (3 mois)</span>
-                        </div>
-                        <p class="job-location">Paris, France</p>
-                        <p class="job-title">Technicien maintenance</p>
-                        <p class="job-description">
-                            Stage de 3 mois. J'ai participé à l'installation et à la mise en place de systèmes publicitaires, la gestion de la maintenance du parc informatique, le support technique et la résolution de problèmes.
-                            J'ai également assuré la maintenance et le dépannage de l'infrastructure, ce qui a contribué à la stabilité et à l'efficacité du système.
-                        </p>
-                        <div class="skills-list">
-                            <span class="skill">Hikvision</span>
-                            <span class="skill">Linux</span>
-                            <span class="skill">Support technique</span>
-                            <span class="skill">Windows</span>
-                            <span class="skill">Windows Server</span>
+                    <div class="timeline-item">
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-card">
+                            <div class="timeline-header">
+                                <div>
+                                    <h3>Timtech</h3>
+                                    <span class="timeline-role">Technicien maintenance</span>
+                                </div>
+                                <span class="timeline-date">Nov 2023 - Jan 2024</span>
+                            </div>
+                            <p class="timeline-location">📍 Paris, France</p>
+                            <p class="timeline-desc">Stage de 3 mois. J'ai participé à l'installation et à la mise en place de systèmes publicitaires, la gestion de la maintenance du parc informatique, le support technique et la résolution de problèmes. J'ai également assuré la maintenance et le dépannage de l'infrastructure, ce qui a contribué à la stabilité et à l'efficacité du système.</p>
+                            <div class="timeline-skills">
+                                <span>Hikvision</span><span>Linux</span><span>Support technique</span><span>Windows</span><span>Windows Server</span>
+                            </div>
                         </div>
                     </div>
-                    <div class="job-item">
-                        <div class="job-header">
-                            <h3>Association ABL - Lille</h3>
-                            <span class="job-duration">Mai 2017 - Juin 2023 (6 ans et 2 mois)</span>
-                        </div>
-                        <p class="job-location">Lille-France</p>
-                        <p class="job-title">Administrateur de l'association ABL</p>
-                        <p class="job-description">
-                            J'ai été bénévole au sein de l'association, où j'ai géré l'hébergement, la maintenance et le dépannage du site web.
-                            J'ai également assuré la gestion et la maintenance interne des services informatique, et j'ai réalisé des projets numériques.
-                        </p>
-                        <div class="skills-list">
-                            <span class="skill">DNS</span>
-                            <span class="skill">Windows Server</span>
-                            <span class="skill">Hikvision</span>
-                            <span class="skill">Javascript</span>
-                            <span class="skill">Python</span>
+                    <div class="timeline-item">
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-card">
+                            <div class="timeline-header">
+                                <div>
+                                    <h3>Association ABL - Lille</h3>
+                                    <span class="timeline-role">Administrateur de l'association ABL</span>
+                                </div>
+                                <span class="timeline-date">Mai 2017 - Juin 2023</span>
+                            </div>
+                            <p class="timeline-location">📍 Lille, France</p>
+                            <p class="timeline-desc">J'ai été bénévole au sein de l'association, où j'ai géré l'hébergement, la maintenance et le dépannage du site web. J'ai également assuré la gestion et la maintenance interne des services informatique, et j'ai réalisé des projets numériques.</p>
+                            <div class="timeline-skills">
+                                <span>DNS</span><span>Windows Server</span><span>Hikvision</span><span>Javascript</span><span>Python</span>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
-        </main>
+        </section>
+    </main>
 
-        <footer class="main-footer">
-            <div class="container footer-content">
-                <div class="footer-logo">
-                    <img src="img/Name.png" alt="Kyvatech Footer Logo">
-                </div>
-                <div class="footer-contact">
-                    <h4>Contact</h4>
-                    <p>Youva KAOUI</p>
-                    <p>110 RUE de Fontenay
-                        94300 Vincennes FRANCE</p>
-                    <p>+33 7 69 35 79 77</p>
-                    <p>contact@kyvatech.com</p>
-                </div>
-                <div class="social-media">
-                </div>
+    <footer class="main-footer">
+        <div class="container footer-content">
+            <div class="footer-logo">
+                <img src="img/Name.png" alt="Kyvatech Footer Logo">
             </div>
-            <div class="footer-bottom">
-                <p>&copy; 2025 Kyvatech. Tous droits réservés.</p>
+            <div class="footer-contact">
+                <h4>Contact</h4>
+                <p>Youva KAOUI</p>
+                <p>110 RUE de Fontenay
+                    94300 Vincennes FRANCE</p>
+                <p>+33 7 69 35 79 77</p>
+                <p>contact@kyvatech.com</p>
             </div>
-        </footer>
-    </div>
+            <div class="social-media">
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2025 Kyvatech. Tous droits réservés.</p>
+        </div>
+    </footer>
 
-    <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
     <script>
-        particlesJS('particles-js', {
-            "particles": {
-                "number": {
-                    "value": 30,
-                    "density": {
-                        "enable": true,
-                        "value_area": 800
-                    }
-                },
-                "color": { "value": "#ffffff" },
-                "shape": { "type": "circle" },
-                "opacity": {
-                    "value": 0.5,
-                    "random": false,
-                },
-                "size": {
-                    "value": 3,
-                    "random": true,
-                },
-                "line_linked": {
-                    "enable": true,
-                    "distance": 150,
-                    "color": "#ffffff",
-                    "opacity": 0.4,
-                    "width": 1
-                },
-                "move": {
-                    "enable": true,
-                    "speed": 1.5,
-                    "direction": "none",
-                    "random": false,
-                    "straight": false,
-                    "out_mode": "out",
-                    "bounce": false,
-                }
-            },
-            "interactivity": {
-                "detect_on": "canvas",
-                "events": {
-                    "onhover": {
-                        "enable": true,
-                        "mode": "grab"
-                    },
-                    "onclick": {
-                        "enable": true,
-                        "mode": "push"
-                    },
-                    "resize": true
-                },
-                "modes": {
-                    "grab": {
-                        "distance": 140,
-                        "line_linked": { "opacity": 1 }
-                    },
-                    "push": { "particles_nb": 4 }
-                }
-            },
-            "retina_detect": true
+        gsap.registerPlugin(ScrollTrigger);
+        document.addEventListener('DOMContentLoaded', () => {
+            // Profile card animation
+            gsap.from('.profile-card', { opacity: 0, y: 40, duration: 1, delay: 0.2, ease: 'power3.out' });
+            gsap.from('.profile-photo', { opacity: 0, scale: 0.8, duration: 1, delay: 0.4, ease: 'back.out(1.7)' });
+            gsap.from('.profile-info > *', { opacity: 0, y: 20, duration: 0.8, stagger: 0.15, delay: 0.6, ease: 'power3.out' });
+
+            // Expertise cards scroll animation
+            gsap.from('.expertise-intro', {
+                scrollTrigger: { trigger: '.expertise-intro', start: 'top 85%', toggleActions: 'play none none none' },
+                opacity: 0, y: 40, duration: 1, ease: 'power3.out'
+            });
+            gsap.utils.toArray('.expertise-card').forEach((card, i) => {
+                gsap.from(card, {
+                    scrollTrigger: { trigger: card, start: 'top 85%', toggleActions: 'play none none none' },
+                    opacity: 0, y: 50, scale: 0.95, duration: 0.8, delay: i * 0.1, ease: 'power3.out'
+                });
+            });
+            gsap.from('.expertise-cta', {
+                scrollTrigger: { trigger: '.expertise-cta', start: 'top 85%', toggleActions: 'play none none none' },
+                opacity: 0, y: 40, duration: 1, ease: 'power3.out'
+            });
+
+            // Timeline cards scroll animation
+            gsap.utils.toArray('.timeline-item').forEach((item, i) => {
+                gsap.from(item, {
+                    scrollTrigger: { trigger: item, start: 'top 85%', toggleActions: 'play none none none' },
+                    opacity: 0, x: i % 2 === 0 ? -40 : 40, duration: 0.8, ease: 'power3.out'
+                });
+            });
+
+            // Section headers
+            gsap.utils.toArray('.section-header').forEach(header => {
+                gsap.from(header, {
+                    scrollTrigger: { trigger: header, start: 'top 85%', toggleActions: 'play none none none' },
+                    opacity: 0, y: 40, duration: 1, ease: 'power3.out'
+                });
+            });
         });
     </script>
     <script src="script.js"></script>
