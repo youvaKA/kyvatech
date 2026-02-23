@@ -464,6 +464,7 @@ a {
     font-size: 1.4rem;
 }
 
+/* Floating card positions: distributed in hero corners */
 .card-1 { top: 20%; left: 8%; }
 .card-2 { top: 15%; right: 10%; }
 .card-3 { bottom: 25%; left: 5%; }
