@@ -79,10 +79,7 @@ document.addEventListener('DOMContentLoaded', () => {
             duration: 2,
             delay: 1.8,
             ease: 'power2.out',
-            snap: { textContent: 1 },
-            onUpdate: function() {
-                el.textContent = Math.round(parseFloat(el.textContent));
-            }
+            snap: { textContent: 1 }
         });
     });
 
