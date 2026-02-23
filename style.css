@@ -662,7 +662,7 @@ a {
 /* ========================================= */
 
 .why-kyvatech-section {
-    background-color: var(--background-dark);
+    background: var(--dark-bg);
     color: white;
     padding: var(--spacing-xl) 0;
     position: relative;
@@ -677,7 +677,9 @@ a {
     left: 0;
     right: 0;
     bottom: 0;
-    background: linear-gradient(135deg, rgba(0, 45, 98, 0.95) 0%, rgba(0, 35, 80, 0.9) 100%);
+    background:
+        radial-gradient(ellipse at 20% 50%, rgba(123, 47, 247, 0.08) 0%, transparent 50%),
+        radial-gradient(ellipse at 80% 30%, rgba(0, 240, 255, 0.06) 0%, transparent 50%);
     z-index: 0;
 }
 
@@ -695,10 +697,9 @@ a {
 }
 
 .why-text h2 {
-    color: white;
+    color: var(--text-primary);
     margin-bottom: var(--spacing-lg);
     font-size: 1.7em;
-    position: relative;
 }
 
 .why-text ul {
@@ -708,45 +709,49 @@ a {
 
 .why-text ul li {
     margin-bottom: var(--spacing-md);
-    font-size: 1.2em;
-    padding: var(--spacing-md);
-    background: rgba(255, 255, 255, 0.1);
-    border-radius: 10px;
-    border-left: 4px solid var(--secondary-color);
+    font-size: 1.1em;
+    padding: var(--spacing-md) var(--spacing-md) var(--spacing-md) calc(var(--spacing-md) + 8px);
+    background: var(--glass-bg);
+    border: 1px solid var(--glass-border);
+    border-radius: 16px;
+    border-left: 3px solid var(--accent-cyan);
     transition: all 0.3s ease;
-    position: relative;
+    color: var(--text-secondary);
 }
 
 .why-text ul li:hover {
-    background: rgba(255, 255, 255, 0.15);
-    transform: translateX(10px);
+    background: rgba(255, 255, 255, 0.08);
+    transform: translateX(8px);
+    border-color: rgba(0, 240, 255, 0.3);
+    border-left-color: var(--accent-cyan);
 }
 
 .why-text ul li::before {
     content: "✓";
-    color: var(--secondary-color);
+    color: var(--accent-cyan);
     font-weight: bold;
     margin-right: var(--spacing-sm);
-    font-size: 1.2em;
+    font-size: 1.1em;
 }
 
 .why-text .highlight {
     font-weight: var(--heading-font-weight);
-    color: var(--secondary-color);
+    color: var(--accent-cyan);
 }
 
 .contact-form-simple {
     flex: 1;
-    background: linear-gradient(135deg, rgba(255, 255, 255, 0.08) 0%, rgba(255, 255, 255, 0.03) 100%);
+    background: var(--glass-bg);
     padding: var(--spacing-xl);
-    border-radius: 20px;
-    box-shadow: 0 10px 40px rgba(0,0,0,0.2), inset 0 1px 0 rgba(255,255,255,0.1);
-    border: 1px solid rgba(255, 255, 255, 0.1);
-    backdrop-filter: blur(10px);
+    border-radius: 24px;
+    box-shadow: 0 10px 40px rgba(0,0,0,0.2);
+    border: 1px solid var(--glass-border);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
 }
 
 .contact-form-simple h3 {
-    color: white;
+    color: var(--text-primary);
     margin-bottom: var(--spacing-lg);
     font-size: 1.8em;
     text-align: center;
@@ -762,7 +767,7 @@ a {
     transform: translateX(-50%);
     width: 50px;
     height: 3px;
-    background: linear-gradient(90deg, var(--secondary-color), var(--primary-color));
+    background: linear-gradient(90deg, var(--accent-cyan), var(--accent-purple));
     border-radius: 2px;
 }
 
@@ -770,54 +775,52 @@ a {
 .contact-form-simple form textarea {
     width: 100%;
     padding: var(--spacing-md);
-    margin-bottom: var(--spacing-lg);
-    border: 2px solid rgba(255, 255, 255, 0.2);
-    border-radius: 10px;
-    background: rgba(255, 255, 255, 0.1);
+    margin-bottom: var(--spacing-md);
+    border: 1px solid var(--glass-border);
+    border-radius: 12px;
+    background: rgba(255, 255, 255, 0.05);
     color: white;
     box-sizing: border-box;
     max-width: 100%;
     font-size: 1em;
     transition: all 0.3s ease;
-    backdrop-filter: blur(5px);
 }
 
 .contact-form-simple form input:focus,
 .contact-form-simple form textarea:focus {
     outline: none;
-    border-color: var(--secondary-color);
-    background: rgba(255, 255, 255, 0.15);
-    box-shadow: 0 0 20px rgba(46, 204, 113, 0.3);
-    transform: translateY(-2px);
+    border-color: var(--accent-cyan);
+    background: rgba(255, 255, 255, 0.08);
+    box-shadow: 0 0 20px rgba(0, 240, 255, 0.15);
 }
 
 .contact-form-simple form input::placeholder,
 .contact-form-simple form textarea::placeholder {
-    color: rgba(255, 255, 255, 0.6);
+    color: rgba(255, 255, 255, 0.4);
     font-size: 0.95em;
 }
 
 .contact-form-simple form button {
-    background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
-    color: white;
+    background: var(--accent-cyan);
+    color: var(--dark-bg);
     padding: var(--spacing-md) var(--spacing-xl);
     border: none;
-    border-radius: 25px;
+    border-radius: 12px;
     cursor: pointer;
     font-size: 1.1em;
-    font-weight: 600;
+    font-weight: 700;
     text-transform: uppercase;
     letter-spacing: 1px;
-    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    transition: all 0.3s ease;
     position: relative;
     overflow: hidden;
-    box-shadow: 0 4px 15px rgba(52, 152, 219, 0.3);
+    box-shadow: 0 0 30px rgba(0, 240, 255, 0.2);
     width: 100%;
 }
 
 .contact-form-simple form button:hover {
     transform: translateY(-3px);
-    box-shadow: 0 8px 25px rgba(52, 152, 219, 0.4);
+    box-shadow: 0 0 40px rgba(0, 240, 255, 0.4);
 }
 
 .contact-form-simple form button:active {
@@ -844,12 +847,13 @@ a {
 /* ========================================= */
 
 .main-footer {
-    background: linear-gradient(135deg, var(--background-dark-footer), #1a252f);
+    background: rgba(10, 10, 26, 0.95);
     color: var(--light-text-color);
     padding: var(--spacing-xl) 0 var(--spacing-md);
     position: relative;
     overflow: hidden;
     z-index: 1;
+    border-top: 1px solid var(--glass-border);
 }
 
 .main-footer::before {
@@ -859,8 +863,8 @@ a {
     left: 0;
     right: 0;
     bottom: 0;
-    background: radial-gradient(circle at 20% 50%, rgba(52, 152, 219, 0.1), transparent 50%),
-                radial-gradient(circle at 80% 20%, rgba(46, 204, 113, 0.1), transparent 50%);
+    background: radial-gradient(circle at 20% 50%, rgba(0, 240, 255, 0.04), transparent 50%),
+                radial-gradient(circle at 80% 20%, rgba(123, 47, 247, 0.04), transparent 50%);
     pointer-events: none;
 }
 
@@ -887,7 +891,7 @@ a {
 }
 
 .footer-contact h4 {
-    color: var(--secondary-color);
+    color: var(--accent-cyan);
     margin-bottom: var(--spacing-sm);
     font-weight: 600;
 }
