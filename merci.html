@@ -17,9 +17,7 @@
 </head>
 <body>
 
-    <div id="particles-js"></div>
-    
-    <!-- Animation de confettis -->
+    <!-- Confetti container -->
     <div id="confetti-container"></div>
 
     <header class="main-header">
@@ -46,6 +44,10 @@
     </header>
 
     <main class="thank-you-page">
+        <div class="thank-you-bg">
+            <div class="thank-you-gradient"></div>
+            <div class="thank-you-grid-overlay"></div>
+        </div>
         <div class="container">
             <div class="thank-you-content">
                 <div class="success-icon">
@@ -64,9 +66,9 @@
                         Votre message a été envoyé avec succès. Je vous remercie pour votre intérêt pour mes services.
                     </p>
                     
-                    <p class="response-info">
-                        <strong>Je vous répondrai dans les plus brefs délais</strong>, généralement sous 24 heures.
-                    </p>
+                    <div class="response-info">
+                        <p><strong>Je vous répondrai dans les plus brefs délais</strong>, généralement sous 24 heures.</p>
+                    </div>
                     
                     <div class="next-steps">
                         <h3>En attendant ma réponse :</h3>
@@ -79,11 +81,11 @@
                 </div>
                 
                 <div class="action-buttons">
-                    <a href="index.html" class="btn btn-primary">Retour à l'accueil</a>
-                    <a href="about.html" class="btn btn-secondary">En savoir plus</a>
+                    <a href="index.html" class="btn-glow">Retour à l'accueil</a>
+                    <a href="about.html" class="btn-outline">En savoir plus</a>
                 </div>
                 
-                <div class="contact-info">
+                <div class="contact-direct">
                     <p><strong>Contact direct :</strong></p>
                     <p>📧 contact@kyvatech.com</p>
                     <p>📞 +33 7 69 35 79 77</p>
@@ -113,68 +115,17 @@
         </div>
     </footer>
 
-    <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
     <script>
-        particlesJS('particles-js', {
-            "particles": {
-                "number": {
-                    "value": 30,
-                    "density": {
-                        "enable": true,
-                        "value_area": 800
-                    }
-                },
-                "color": { "value": "#ffffff" },
-                "shape": { "type": "circle" },
-                "opacity": {
-                    "value": 0.3,
-                    "random": false,
-                },
-                "size": {
-                    "value": 3,
-                    "random": true,
-                },
-                "line_linked": {
-                    "enable": true,
-                    "distance": 150,
-                    "color": "#ffffff",
-                    "opacity": 0.2,
-                    "width": 1
-                },
-                "move": {
-                    "enable": true,
-                    "speed": 1,
-                    "direction": "none",
-                    "random": false,
-                    "straight": false,
-                    "out_mode": "out",
-                    "bounce": false,
-                }
-            },
-            "interactivity": {
-                "detect_on": "canvas",
-                "events": {
-                    "onhover": {
-                        "enable": true,
-                        "mode": "grab"
-                    },
-                    "onclick": {
-                        "enable": true,
-                        "mode": "push"
-                    },
-                    "resize": true
-                },
-                "modes": {
-                    "grab": {
-                        "distance": 140,
-                        "line_linked": { "opacity": 0.5 }
-                    },
-                    "push": { "particles_nb": 4 }
-                }
-            },
-            "retina_detect": true
+        document.addEventListener('DOMContentLoaded', () => {
+            gsap.from('.success-icon', { opacity: 0, scale: 0.3, duration: 1, delay: 0.3, ease: 'back.out(1.7)' });
+            gsap.from('.thank-you-content h1', { opacity: 0, y: 30, duration: 1, delay: 0.6, ease: 'power3.out' });
+            gsap.from('.thank-you-message', { opacity: 0, y: 30, duration: 1, delay: 0.8, ease: 'power3.out' });
+            gsap.from('.action-buttons', { opacity: 0, y: 20, duration: 0.8, delay: 1, ease: 'power3.out' });
+            gsap.from('.contact-direct', { opacity: 0, y: 20, duration: 0.8, delay: 1.2, ease: 'power3.out' });
         });
     </script>
     <script src="confetti.js"></script>
+    <script src="script.js"></script>
 </body>
 </html>
